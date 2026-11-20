@@ -77,6 +77,10 @@
     }
     return el;
   }
+  // null や false を除いて入れる（そのまま渡すと画面に "null" と出るため）
+  const clean = (kids) => kids.flat().filter((k) => k != null && k !== false);
+  const setKids = (el, ...kids) => el.replaceChildren(...clean(kids));
+  const addKids = (el, ...kids) => el.append(...clean(kids));
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   function shuffle(a) {
     const b = a.slice();
@@ -226,7 +230,7 @@
   }
   function frame(...kids) {
     const pct = Math.round((run.i / run.queue.length) * 100);
-    app.replaceChildren(
+    setKids(app, 
       h('div', { class: 'row spread' },
         h('span', { class: 'muted' }, `${run.title}  ${run.i + 1} / ${run.queue.length}`),
         h('button', { class: 'small', type: 'button', onclick: home }, t('home'))),
@@ -242,7 +246,7 @@
   function finish() {
     const n = run.missed.size;
     if (run.onFinish) run.onFinish();
-    app.replaceChildren(h('div', { class: 'card' },
+    setKids(app, h('div', { class: 'card' },
       h('h1', {}, t('finished')),
       n ? h('p', {}, `${n} ${t('againCount')}`) : null,
       h('button', { class: 'primary', type: 'button', onclick: home }, t('home'))));
@@ -285,7 +289,7 @@
       });
       const trapped = q.traps && q.traps[String(i)];
       if (!ok && itemId) miss(itemId);
-      out.append(
+      addKids(out, 
         h('p', { class: 'fb ' + (ok ? 'ok' : 'ng') }, ok ? t('right') : t('wrong')),
         L(q, 'why') ? h('p', {}, t('why') + ': ' + L(q, 'why')) : null,
         itemId ? phrase(itemId) : null,
@@ -322,7 +326,7 @@
       const ok = picked.every((id, n) => id === q.sequence[n]);
       locked = true; draw(); checkBtn.remove();
       if (!ok) q.sequence.forEach(miss);
-      out.append(h('p', { class: 'fb ' + (ok ? 'ok' : 'ng') }, ok ? t('right') : t('wrong')),
+      addKids(out, h('p', { class: 'fb ' + (ok ? 'ok' : 'ng') }, ok ? t('right') : t('wrong')),
         ...q.sequence.map((id) => phrase(id, { note: false })), nextBtn());
       playSeq(q.sequence);
     } }, t('check'));
@@ -339,7 +343,7 @@
         else c.seq.forEach(miss);
         run.i += 1; showCard();
       };
-      out.append(...c.seq.map((id) => phrase(id, { note: c.seq.length === 1 })),
+      addKids(out, ...c.seq.map((id) => phrase(id, { note: c.seq.length === 1 })),
         h('div', { class: 'row' },
           h('button', { class: 'primary', type: 'button', id: 'could', onclick: () => judge(true) }, t('could')),
           h('button', { type: 'button', id: 'notyet', onclick: () => judge(false) }, t('notYet'))));
@@ -373,7 +377,7 @@
       if (!armed) { armed = true; resetBtn.textContent = t('resetSure'); return; }
       S = { done: {}, review: {}, set: S.set, reports: [] }; save(); home();
     } }, t('reset'));
-    app.replaceChildren(
+    setKids(app, 
       h('div', { class: 'row spread' },
         h('h1', {}, t('app')),
         h('button', { class: 'small', type: 'button', onclick: () => { S.set.ui = S.set.ui === 'ceb' ? 'ja' : 'ceb'; save(); home(); } }, t('lang'))),
@@ -405,7 +409,7 @@
   if (window.UNIT_DATA) boot(window.UNIT_DATA);
   else {
     fetch('data/unit-1-1.json').then((r) => r.json()).then(boot).catch(() => {
-      app.replaceChildren(h('p', { class: 'err' }, 'data/unit-1-1.json を読み込めませんでした。'));
+      setKids(app, h('p', { class: 'err' }, 'data/unit-1-1.json を読み込めませんでした。'));
     });
   }
 })();
