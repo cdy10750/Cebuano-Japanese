@@ -26,7 +26,7 @@ npx serve .
 
 Cloudflare Workers（静的ファイルのみ）。設定は `wrangler.jsonc`、配信しないファイルは `.assetsignore`。
 Cloudflare の管理画面でこのリポジトリを接続すると、main に入った変更が自動で公開される。
-公開先: https://nihongo-bisaya.bisayacebuano.workers.dev/
+公開先: https://nihongo.bisayacebuano.workers.dev/
 
 ## できること
 
