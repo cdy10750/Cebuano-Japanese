@@ -1,0 +1,14 @@
+// Cloudflare Workers settings for Nihongo para sa Bisaya.
+// For now the site is static files only: no login and no Worker code.
+// Discord login will be added later, the same way as Real Life Bisaya.
+{
+  "name": "nihongo",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    // The whole repository is the site; .assetsignore leaves out what must not be served.
+    "directory": "."
+  },
+  "observability": { "enabled": true }
+}
