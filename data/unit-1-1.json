@@ -1,0 +1,671 @@
+{
+  "version": 1,
+  "_note": "コース1／段階1／ユニット1-1。Real Life Bisaya の trainer/phrases.json（場面→ヒント→答え）と listening/data（questions: type, choices, answer, explanation）の形に合わせた。違いは、学習者向けの文がセブアノ語（_ceb）で、遠藤の確認用に日本語（_ja）を併記すること。_ceb の文はすべて要確認。",
+  "course": 1,
+  "stage": 1,
+  "unit": {
+    "id": "1-1",
+    "title_ja": "レッスンを始める",
+    "title_ceb": "Pagsugod sa Klase",
+    "cando_ja": "生徒側の時刻に合った挨拶で始め、「よろしくお願いします」と言える",
+    "cando_ceb": "Makatimbaya ka sumala sa oras sa estudyante, ug makaingon og \"Yoroshiku onegaishimasu.\"",
+    "target": "both",
+    "video": {
+      "file": "",
+      "title_ja": "時差の「こんばんは」編",
+      "items": [
+        "A03",
+        "A04",
+        "A06"
+      ],
+      "title_ceb": "Ang \"Konbanwa\" ug ang oras sa Japan"
+    }
+  },
+  "srs": {
+    "intervals_days": [
+      1,
+      3,
+      7,
+      14,
+      30
+    ],
+    "_note": "Real Life Bisaya の listening/js/srs.js と同じ。言えなかった・間違えた項目を1日後に戻す。"
+  },
+  "rules": {
+    "time_offset_hours": 1,
+    "greeting_by_japan_hour": [
+      {
+        "from": 4,
+        "to": 10,
+        "item": "A01"
+      },
+      {
+        "from": 11,
+        "to": 17,
+        "item": "A02"
+      },
+      {
+        "from": 18,
+        "to": 27,
+        "item": "A03"
+      }
+    ],
+    "hint_style": "各語の最初の1拍だけを見せる"
+  },
+  "items": [
+    {
+      "id": "A01",
+      "category": "開始の挨拶",
+      "scene_ceb": "Alas 7 sa buntag sa Japan. Bag-o lang nisugod ang klase.",
+      "intent_ceb": "Unsay una nimong isulti sa estudyante?",
+      "scene_ja": "日本は朝7時。レッスンが始まったところ。",
+      "intent_ja": "生徒に最初に何と言う？",
+      "hint": "O… go…",
+      "romaji": "Ohayō gozaimasu.",
+      "ja": "おはようございます。",
+      "furigana": [],
+      "ceb": "Maayong buntag.",
+      "ceb_source": "資料",
+      "note_ceb": "Taas ang katapusan nga \"o\": o-ha-yo-o. Dili \"ohayu.\" Ayaw kusga ang \"za.\"",
+      "note_ja": "最後の「お」は長い。ohayu にしない。「ざ」を強く言わない。",
+      "explain": "K-A01",
+      "audio": "audio/1-1/A01.mp3",
+      "pitfalls": [
+        "o_u",
+        "long_vowel",
+        "stress"
+      ]
+    },
+    {
+      "id": "A02",
+      "category": "開始の挨拶",
+      "scene_ceb": "Alas 2 sa hapon sa Japan. Nisulod ang estudyante sa klase.",
+      "intent_ceb": "Timbayaa siya.",
+      "scene_ja": "日本は午後2時。生徒が入室した。",
+      "intent_ja": "挨拶しよう。",
+      "hint": "Ko…",
+      "romaji": "Konnichiwa.",
+      "ja": "こんにちは。",
+      "furigana": [],
+      "ceb": "Maayong udto. / Maayong hapon.",
+      "ceb_source": "資料",
+      "note_ceb": "Duha ka \"n\": ko-n-ni-chi-wa. Tan-awa ang oras sa Japan, dili sa Cebu.",
+      "note_ja": "n が2つある。セブではなく日本の時刻を見る。",
+      "explain": "K-A02",
+      "audio": "audio/1-1/A02.mp3",
+      "pitfalls": [
+        "moraic_n",
+        "time_difference"
+      ]
+    },
+    {
+      "id": "A03",
+      "category": "開始の挨拶",
+      "scene_ceb": "Alas 8 sa gabii sa Cebu, alas 9 na sa Japan. Nisugod ang klase.",
+      "intent_ceb": "Timbayaa ang estudyante.",
+      "scene_ja": "セブは夜8時、日本は夜9時。レッスンが始まった。",
+      "intent_ja": "挨拶しよう。",
+      "hint": "Ko…",
+      "romaji": "Konbanwa.",
+      "ja": "こんばんは。",
+      "furigana": [],
+      "ceb": "Maayong gabii.",
+      "ceb_source": "資料",
+      "note_ceb": "\"Ko,\" dili \"ku.\" Kadaghanan sa estudyanteng Hapon mag-klase sa gabii.",
+      "note_ja": "「こ」であり「く」ではない。日本人の生徒は夜の受講が多い。",
+      "explain": "",
+      "audio": "audio/1-1/A03.mp3",
+      "pitfalls": [
+        "o_u",
+        "moraic_n"
+      ]
+    },
+    {
+      "id": "A04",
+      "category": "開始の挨拶",
+      "scene_ceb": "Karon pa lang mo nagkita sa estudyante.",
+      "intent_ceb": "Unsay isulti nimo human sa pangtimbaya?",
+      "scene_ja": "この生徒とは今日が初めて。",
+      "intent_ja": "挨拶の後に何と言う？",
+      "hint": "Ha…",
+      "romaji": "Hajimemashite.",
+      "ja": "はじめまして。",
+      "furigana": [],
+      "ceb": "Nalipay ko nga nakaila nimo.",
+      "ceb_source": "Jen OK",
+      "note_ceb": "Igo na kini. Dili na kinahanglan dugangan og laing pulong.",
+      "note_ja": "これだけで完結する。ほかの言葉を足さなくてよい。",
+      "explain": "",
+      "audio": "audio/1-1/A04.mp3",
+      "pitfalls": []
+    },
+    {
+      "id": "A05",
+      "category": "開始の挨拶",
+      "scene_ceb": "Nibalik ang estudyante nga nag-book nimo sa miaging semana.",
+      "intent_ceb": "Ipakita nga nalipay ka.",
+      "scene_ja": "先週予約してくれた生徒がまた来た。",
+      "intent_ja": "うれしい気持ちを伝えよう。",
+      "hint": "Ma… a… u…",
+      "romaji": "Mata aete ureshii desu.",
+      "ja": "また会えてうれしいです。",
+      "furigana": [
+        {
+          "t": "会",
+          "r": "あ"
+        }
+      ],
+      "ceb": "Nalipay ko nga nagkita ta pag-usab.",
+      "ceb_source": "Jen OK",
+      "note_ceb": "\"a-e-te\": tulo ka tingog, ayaw hiusaha. Hinay ra ang \"u\" sa \"desu.\"",
+      "note_ja": "「あ・え・て」は3つの音。つなげない。「です」の u は弱い。",
+      "explain": "",
+      "audio": "audio/1-1/A05.mp3",
+      "pitfalls": [
+        "e_i"
+      ]
+    },
+    {
+      "id": "A06",
+      "category": "開始の挨拶",
+      "scene_ceb": "Regular nimo nga estudyante. Human sa pangtimbaya, sa dili pa mosugod ang leksyon.",
+      "intent_ceb": "Unsay imong isulti?",
+      "scene_ja": "いつもの生徒。挨拶の後、教材に入る前。",
+      "intent_ja": "何と言う？",
+      "hint": "Kyō… yo… o…",
+      "romaji": "Kyō mo yoroshiku onegaishimasu.",
+      "ja": "今日もよろしくお願いします。",
+      "furigana": [
+        {
+          "t": "今日",
+          "r": "きょう"
+        },
+        {
+          "t": "願",
+          "r": "ねが"
+        }
+      ],
+      "ceb": "Sugdan na nato. Salamat daan!",
+      "ceb_source": "要確認",
+      "note_ceb": "Walay eksaktong hubad. Kabisaha isip usa ka tibuok. Sa unang klase, kuhaa ang \"Kyō mo.\"",
+      "note_ja": "ぴったりの訳はない。丸ごと覚える。初回は「今日も」を取る。",
+      "explain": "K-A06",
+      "audio": "audio/1-1/A06.mp3",
+      "variants": [
+        {
+          "id": "A06b",
+          "romaji": "Yoroshiku onegaishimasu.",
+          "ja": "よろしくお願いします。",
+          "furigana": [
+            {
+              "t": "願",
+              "r": "ねが"
+            }
+          ],
+          "use_ja": "初めての生徒に",
+          "audio": "audio/1-1/A06b.mp3",
+          "use_ceb": "Sa estudyante nga karon pa nimo nakita"
+        }
+      ],
+      "pitfalls": [
+        "long_vowel",
+        "untranslatable"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "1-1-L1",
+      "title_ja": "時間で変わる挨拶",
+      "title_ceb": "Pangtimbaya sumala sa oras",
+      "new_items": [
+        "A01",
+        "A02",
+        "A03"
+      ],
+      "steps": [
+        {
+          "kind": "video"
+        },
+        {
+          "kind": "choice",
+          "questions": [
+            "1-1-L1-q1",
+            "1-1-L1-q2",
+            "1-1-L1-q3"
+          ]
+        },
+        {
+          "kind": "listening",
+          "questions": [
+            "1-1-L1-q4",
+            "1-1-L1-q5",
+            "1-1-L1-q6"
+          ]
+        },
+        {
+          "kind": "speaking",
+          "hint": true,
+          "items": [
+            "A01",
+            "A02",
+            "A03"
+          ]
+        },
+        {
+          "kind": "listen_through",
+          "items": [
+            "A01",
+            "A02",
+            "A03"
+          ],
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "id": "1-1-L2",
+      "title_ja": "初回・リピーターへの一言",
+      "title_ceb": "Unang klase ug estudyante nga nibalik",
+      "new_items": [
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "steps": [
+        {
+          "kind": "video"
+        },
+        {
+          "kind": "choice",
+          "questions": [
+            "1-1-L2-q1",
+            "1-1-L2-q2",
+            "1-1-L2-q3"
+          ]
+        },
+        {
+          "kind": "listening",
+          "questions": [
+            "1-1-L2-q4",
+            "1-1-L2-q5",
+            "1-1-L2-q6"
+          ]
+        },
+        {
+          "kind": "speaking",
+          "hint": true,
+          "items": [
+            "A04",
+            "A05",
+            "A06"
+          ]
+        },
+        {
+          "kind": "listen_through",
+          "items": [
+            "A04",
+            "A05",
+            "A06"
+          ],
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "id": "1-1-L3",
+      "title_ja": "使い分け",
+      "title_ceb": "Unsay gamiton?",
+      "new_items": [],
+      "steps": [
+        {
+          "kind": "choice",
+          "questions": [
+            "1-1-L3-q1",
+            "1-1-L3-q2",
+            "1-1-L3-q3",
+            "1-1-L3-q4"
+          ]
+        },
+        {
+          "kind": "order",
+          "questions": [
+            "1-1-L3-q5",
+            "1-1-L3-q6"
+          ]
+        },
+        {
+          "kind": "speaking",
+          "hint": true,
+          "sequences": [
+            "1-1-L3-q5",
+            "1-1-L3-q6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-1-L4",
+      "title_ja": "通し練習",
+      "title_ceb": "Tibuok nga praktis",
+      "new_items": [],
+      "steps": [
+        {
+          "kind": "speaking",
+          "hint": false,
+          "roleplays": [
+            "1-1-L4-r1",
+            "1-1-L4-r2",
+            "1-1-L4-r3"
+          ]
+        }
+      ],
+      "pass_ja": "3回とも言えたら修了。言えなかった項目は復習リストに入れる。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "1-1-L1-q1",
+      "type": "scene",
+      "item": "A01",
+      "choices": [
+        "Ohayō gozaimasu.",
+        "Konnichiwa.",
+        "Konbanwa.",
+        "Ohayu gozaimasu."
+      ],
+      "answer": 0,
+      "traps": {
+        "3": "o_u"
+      },
+      "explain": "K-A01"
+    },
+    {
+      "id": "1-1-L1-q2",
+      "type": "scene",
+      "item": "A02",
+      "choices": [
+        "Ohayō gozaimasu.",
+        "Konnichiwa.",
+        "Konbanwa."
+      ],
+      "answer": 1,
+      "explain": "K-A02"
+    },
+    {
+      "id": "1-1-L1-q3",
+      "type": "scene",
+      "item": "A03",
+      "choices": [
+        "Konnichiwa.",
+        "Kunbanwa.",
+        "Konbanwa.",
+        "Ohayō gozaimasu."
+      ],
+      "answer": 2,
+      "traps": {
+        "1": "o_u"
+      },
+      "explain": "K-A01"
+    },
+    {
+      "id": "1-1-L1-q4",
+      "type": "info",
+      "audio_item": "A03",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Maayong buntag.",
+        "Maayong hapon.",
+        "Maayong gabii."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "1-1-L1-q5",
+      "type": "info",
+      "audio_item": "A01",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Maayong buntag.",
+        "Maayong udto.",
+        "Maayong gabii."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "1-1-L1-q6",
+      "type": "info",
+      "audio_item": "A02",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Maayong buntag.",
+        "Maayong udto. / Maayong hapon.",
+        "Maayong gabii."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-1-L2-q1",
+      "type": "scene",
+      "item": "A04",
+      "choices": [
+        "Mata aete ureshii desu.",
+        "Hajimemashite.",
+        "Konbanwa."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-1-L2-q2",
+      "type": "scene",
+      "item": "A05",
+      "choices": [
+        "Hajimemashite.",
+        "Kyō mo yoroshiku onegaishimasu.",
+        "Mata aete ureshii desu."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "1-1-L2-q3",
+      "type": "scene",
+      "item": "A06",
+      "choices": [
+        "Kyō mo yoroshiku onegaishimasu.",
+        "Hajimemashite.",
+        "Mata aete ureshii desu."
+      ],
+      "answer": 0,
+      "explain": "K-A06"
+    },
+    {
+      "id": "1-1-L2-q4",
+      "type": "info",
+      "audio_item": "A04",
+      "prompt_ceb": "Kanus-a nimo kini isulti?",
+      "prompt_ja": "いつ言う？",
+      "choices_ceb": [
+        "Sa estudyante nga karon pa nimo nakita",
+        "Sa regular nimo nga estudyante",
+        "Sa dili na madungog ang tingog"
+      ],
+      "choices_ja": [
+        "初めての生徒に",
+        "いつもの生徒に",
+        "音声が聞こえないとき"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "1-1-L2-q5",
+      "type": "info",
+      "audio_item": "A05",
+      "prompt_ceb": "Kanus-a nimo kini isulti?",
+      "prompt_ja": "いつ言う？",
+      "choices_ceb": [
+        "Sa estudyante nga karon pa nimo nakita",
+        "Sa estudyante nga nibalik",
+        "Sa dili na madungog ang tingog"
+      ],
+      "choices_ja": [
+        "初めての生徒に",
+        "また来てくれた生徒に",
+        "音声が聞こえないとき"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-1-L2-q6",
+      "type": "info",
+      "audio_item": "A06",
+      "prompt_ceb": "Kanus-a nimo kini isulti?",
+      "prompt_ja": "いつ言う？",
+      "choices_ceb": [
+        "Sa pagsulod pa lang sa estudyante",
+        "Sa dili pa mosugod ang leksyon",
+        "Sa dili na madungog ang tingog"
+      ],
+      "choices_ja": [
+        "生徒が入室した瞬間に",
+        "教材に入る前に",
+        "音声が聞こえないとき"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-1-L3-q1",
+      "type": "scene",
+      "scene_ceb": "Alas 9 sa buntag sa Cebu. Ang estudyante anaa sa Japan. Unsay una nimong isulti?",
+      "scene_ja": "セブは朝9時。生徒は日本にいる。最初の挨拶は？",
+      "choices": [
+        "Ohayō gozaimasu.",
+        "Konnichiwa.",
+        "Konbanwa."
+      ],
+      "answer": 0,
+      "why_ceb": "Alas 10 sa buntag sa Japan.",
+      "why_ja": "日本は朝10時。"
+    },
+    {
+      "id": "1-1-L3-q2",
+      "type": "scene",
+      "scene_ceb": "Alas 10 sa buntag sa Cebu. Unsay una nimong isulti?",
+      "scene_ja": "セブは午前10時。最初の挨拶は？",
+      "choices": [
+        "Ohayō gozaimasu.",
+        "Konnichiwa.",
+        "Konbanwa."
+      ],
+      "answer": 1,
+      "why_ceb": "Alas 11 na sa Japan.",
+      "why_ja": "日本は午前11時。",
+      "explain": "K-A02"
+    },
+    {
+      "id": "1-1-L3-q3",
+      "type": "scene",
+      "scene_ceb": "Alas 5 sa hapon sa Cebu. Unsay una nimong isulti?",
+      "scene_ja": "セブは午後5時。最初の挨拶は？",
+      "choices": [
+        "Ohayō gozaimasu.",
+        "Konnichiwa.",
+        "Konbanwa."
+      ],
+      "answer": 2,
+      "why_ceb": "Alas 6 na sa gabii sa Japan.",
+      "why_ja": "日本は午後6時。",
+      "explain": "K-A02"
+    },
+    {
+      "id": "1-1-L3-q4",
+      "type": "scene",
+      "scene_ceb": "Unang klase ninyo sa estudyante. Sa dili pa mosugod ang leksyon, unsay imong isulti?",
+      "scene_ja": "初めての生徒。教材に入る前に言うのは？",
+      "choices": [
+        "Kyō mo yoroshiku onegaishimasu.",
+        "Yoroshiku onegaishimasu.",
+        "Mata aete ureshii desu."
+      ],
+      "answer": 1,
+      "why_ceb": "Unang klase, mao nga walay \"Kyō mo.\"",
+      "why_ja": "初回なので「今日も」は付けない。",
+      "explain": "K-A06"
+    },
+    {
+      "id": "1-1-L3-q5",
+      "type": "order",
+      "scene_ceb": "Unang klase ninyo, gabii sa Japan. Han-aya ang imong isulti.",
+      "scene_ja": "初めての生徒との夜のレッスン。順に並べる。",
+      "sequence": [
+        "A03",
+        "A04",
+        "A06b"
+      ]
+    },
+    {
+      "id": "1-1-L3-q6",
+      "type": "order",
+      "scene_ceb": "Regular nimo nga estudyante, buntag sa Japan. Han-aya ang imong isulti.",
+      "scene_ja": "いつもの生徒との朝のレッスン。順に並べる。",
+      "sequence": [
+        "A01",
+        "A05",
+        "A06"
+      ]
+    }
+  ],
+  "roleplays": [
+    {
+      "id": "1-1-L4-r1",
+      "scene_ceb": "Alas 8 sa gabii sa Cebu. Nisulod ang estudyante nga karon pa nimo nakita.",
+      "scene_ja": "セブは夜8時。初めての生徒が入室した。",
+      "sequence": [
+        "A03",
+        "A04",
+        "A06b"
+      ]
+    },
+    {
+      "id": "1-1-L4-r2",
+      "scene_ceb": "Alas 8 sa buntag sa Cebu. Nisulod ang estudyante nga nag-klase usab sa miaging semana.",
+      "scene_ja": "セブは朝8時。先週も来た生徒が入室した。",
+      "sequence": [
+        "A01",
+        "A05",
+        "A06"
+      ]
+    },
+    {
+      "id": "1-1-L4-r3",
+      "scene_ceb": "Ala 1 sa hapon sa Cebu. Nisulod ang regular nimo nga estudyante.",
+      "scene_ja": "セブは午後1時。いつもの生徒が入室した。",
+      "sequence": [
+        "A02",
+        "A06"
+      ]
+    }
+  ],
+  "explanations": {
+    "K-A01": {
+      "title_ceb": "\"o\" ug \"u\"",
+      "title_ja": "o と u",
+      "ceb": "Sa Binisaya, ang \"o\" ug \"u\" halos parehas ra. Sa Nihongo, lahi gyud sila: kung \"ohayu\" o \"kunbanwa\" ang imong isulti, sayop na. Kung moagi ka sa English, basin \"o-u\" ang imong basa sa \"o.\" Shortcut: basaha ang romaji sama sa Binisaya — usa ka letra, usa ka tingog. Ang \"ō\" taas: o-ha-yo-o.",
+      "ja": "セブアノ語では o と u はほぼ同じ。日本語でははっきり別の音で、ohayu や kunbanwa は間違い。英語経由だと o を「オウ」と読みがち。近道は、ローマ字をセブアノ語と同じく1文字1音で読むこと。ō は長い。"
+    },
+    "K-A02": {
+      "title_ceb": "Oras sa Japan",
+      "title_ja": "日本の時刻で選ぶ",
+      "ceb": "Sa Binisaya, mausab ang pangtimbaya sumala sa oras. Sa Nihongo, parehas — tulo ra ka klase: Ohayō gozaimasu (hangtod mga alas 10), Konnichiwa (alas 11 hangtod alas 5), Konbanwa (alas 6 pataas). Sa English, ang \"Hello\" magamit bisan unsang orasa, mao nga dali ra masayop. Hinumdumi: usa ka oras nga mas una ang Japan kaysa Cebu.",
+      "ja": "セブアノ語の挨拶は時間で変わる。日本語も同じで3種類だけ。朝10時台までおはようございます、11時から17時台こんにちは、18時以降こんばんは。英語の Hello はいつでも使えるので間違えやすい。日本はセブより1時間進んでいる。"
+    },
+    "K-A06": {
+      "title_ceb": "Walay hubad",
+      "title_ja": "訳さない言葉",
+      "ceb": "Walay eksaktong pulong sa Binisaya, ug wala usab sa English. Ang kahulogan: \"Salamat daan, ug magtinabangay ta.\" Ayaw kini hubara; kabisaha isip usa ka tibuok nga pulong sa sinugdanan sa klase. Sa unang klase: Yoroshiku onegaishimasu. Sa sunod nga mga klase: Kyō mo yoroshiku onegaishimasu.",
+      "ja": "セブアノ語にも英語にも同じ語はない。意味は「前もってありがとう、協力し合いましょう」。訳さず、授業の始めの決まった言葉として丸ごと覚える。初回は「よろしくお願いします」、2回目以降は「今日もよろしくお願いします」。"
+    }
+  }
+}
