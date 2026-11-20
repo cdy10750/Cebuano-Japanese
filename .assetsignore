@@ -1,0 +1,14 @@
+# Files in the repository that must not be served as part of the site
+.git
+.github
+.assetsignore
+.wrangler
+node_modules
+tools
+wrangler.jsonc
+package.json
+package-lock.json
+README.md
+CLAUDE.md
+.gitignore
+preview.html

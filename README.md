@@ -22,6 +22,12 @@ npx serve .
 
 1ファイルで確認したいときは `node tools/build-preview.mjs` で `preview.html` を作って開く。
 
+## 公開
+
+Cloudflare Workers（静的ファイルのみ）。設定は `wrangler.jsonc`、配信しないファイルは `.assetsignore`。
+Cloudflare の管理画面でこのリポジトリを接続すると、main に入った変更が自動で公開される。
+公開先: https://nihongo-bisaya.bisayacebuano.workers.dev/
+
 ## できること
 
 - レッスン4回分（新しいフレーズ → 場面から選ぶ → 聞き取り → 文頭ヒント付きスピーキング → 通し聞き、使い分け、通し練習）
