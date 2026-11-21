@@ -89,9 +89,13 @@
   }
 
   // ---------- データ ----------
-  let D, IT = {}, Q = {}, R = {};
-  function index(data) {
-    D = data;
+  // UNITS: 読み込んだユニット（順番どおり）。IT・Q・R・EX は全ユニット共通の索引。
+  const UNITS = [], IT = {}, Q = {}, R = {}, EX = {};
+  let SRS = null;
+  function index(D) {
+    UNITS.push(D);
+    if (D.srs && !SRS) SRS = D.srs;
+    Object.assign(EX, D.explanations || {});
     for (const it of D.items) {
       IT[it.id] = it;
       for (const v of it.variants || []) {
@@ -134,7 +138,7 @@
   }
 
   // ---------- 復習（間隔反復） ----------
-  const intervals = () => (D.srs && D.srs.intervals_days) || [1, 3, 7, 14, 30];
+  const intervals = () => (SRS && SRS.intervals_days) || [1, 3, 7, 14, 30];
   const startOfDay = (ts) => { const d = new Date(ts); d.setHours(0, 0, 0, 0); return d.getTime(); };
   const baseId = (id) => (IT[id] && IT[id].parent) || id;
   function srsMiss(id) {
@@ -192,7 +196,7 @@
       box);
   }
   function explainBox(key, open) {
-    const ex = D.explanations && D.explanations[key];
+    const ex = EX[key];
     const body = ex && (ex[S.set.ui] || ex.ceb);
     if (!body) return null;
     return h('details', open ? { open: true } : {}, h('summary', {}, t('more') + ': ' + (L(ex, 'title') || key)), h('p', {}, body));
@@ -200,12 +204,14 @@
   const sceneText = (o) => [L(o, 'scene'), L(o, 'intent')].filter(Boolean).join(' ');
 
   // ---------- レッスンの組み立て ----------
-  function buildQueue(lesson) {
+  function buildQueue(lesson, unit) {
     const q = [];
+    // 動画があれば最初に見せ、続けて新しいフレーズを1つずつ紹介する。
+    if (lesson.steps.some((st) => st.kind === 'video')) q.push({ k: 'video', unit });
+    for (const id of lesson.new_items || []) q.push({ k: 'learn', id });
     for (const st of lesson.steps) {
       if (st.kind === 'video') {
-        q.push({ k: 'video' });
-        for (const id of lesson.new_items) q.push({ k: 'learn', id });
+        continue;
       } else if (st.kind === 'choice' || st.kind === 'listening' || st.kind === 'order') {
         for (const id of st.questions) q.push({ k: Q[id].type === 'order' ? 'order' : 'q', q: Q[id] });
       } else if (st.kind === 'speaking') {
@@ -253,8 +259,8 @@
   }
   function miss(id) { run.missed.add(baseId(id)); srsMiss(id); }
 
-  function cardVideo() {
-    const v = D.unit.video || {};
+  function cardVideo(c) {
+    const v = c.unit.video || {};
     frame(
       h('h2', {}, t('video') + ': ' + (L(v, 'title') || '')),
       v.file ? h('video', { src: v.file, controls: true, playsinline: true, style: 'width:100%;border-radius:8px' })
@@ -382,34 +388,37 @@
         h('h1', {}, t('app')),
         h('button', { class: 'small', type: 'button', onclick: () => { S.set.ui = S.set.ui === 'ceb' ? 'ja' : 'ceb'; save(); home(); } }, t('lang'))),
       storageOK ? null : h('p', { class: 'err' }, t('storageOff')),
-      h('div', { class: 'card' },
-        h('p', { class: 'muted' }, `${t('unit')} ${D.unit.id}`),
-        h('h2', { style: 'margin-top:0' }, L(D.unit, 'title')),
-        h('p', {}, L(D.unit, 'cando')),
-        h('label', { class: 'toggle' },
-          h('input', { type: 'checkbox', checked: !!S.set.furi, onchange: (e) => { S.set.furi = e.target.checked; save(); document.body.classList.toggle('furi', S.set.furi); } }),
-          t('furi'))),
+      h('label', { class: 'toggle' },
+        h('input', { type: 'checkbox', checked: !!S.set.furi, onchange: (e) => { S.set.furi = e.target.checked; save(); document.body.classList.toggle('furi', S.set.furi); } }),
+        t('furi')),
       h('h2', {}, t('review')),
       due.length
         ? h('button', { class: 'lesson primary', type: 'button', onclick: () => startRun(t('review'), due.map((id) => ({ k: 'speak', seq: [id], hint: true, scene: IT[id], review: true }))) },
             `${due.length} ${t('reviewDue')}`)
         : h('p', { class: 'muted' }, t('noReview')),
-      h('h2', {}, t('lessons')),
-      h('div', { class: 'stack' }, D.lessons.map((ls, n) =>
-        h('button', { class: 'lesson', type: 'button', onclick: () => startRun(`${t('lesson')} ${n + 1}`, buildQueue(ls), () => { S.done[ls.id] = Date.now(); save(); }) },
-          h('span', {}, `${n + 1}. ${S.set.ui === 'ja' ? ls.title_ja : (ls.title_ceb || ls.title_ja)}`),
-          S.done[ls.id] ? h('span', { class: 'badge' }, t('done')) : null))),
+      UNITS.map((D) =>
+        h('div', { class: 'card' },
+          h('p', { class: 'muted' }, `${t('unit')} ${D.unit.id}`),
+          h('h2', { style: 'margin-top:0' }, L(D.unit, 'title')),
+          h('p', {}, L(D.unit, 'cando')),
+          h('div', { class: 'stack' }, D.lessons.map((ls, n) =>
+            h('button', { class: 'lesson', type: 'button', onclick: () => startRun(`${D.unit.id}  ${t('lesson')} ${n + 1}`, buildQueue(ls, D), () => { S.done[ls.id] = Date.now(); save(); }) },
+              h('span', {}, `${n + 1}. ${S.set.ui === 'ja' ? ls.title_ja : (ls.title_ceb || ls.title_ja)}`),
+              S.done[ls.id] ? h('span', { class: 'badge' }, t('done')) : null))))),
       S.reports.length ? h('details', {}, h('summary', {}, `${t('reports')} (${S.reports.length})`),
         ...S.reports.map((r) => h('p', { class: 'muted' }, `[${r.id}] ${r.text}`))) : null,
       h('p', { style: 'margin-top:24px' }, resetBtn));
   }
 
   // ---------- 起動 ----------
-  function boot(data) { index(data); home(); }
-  if (window.UNIT_DATA) boot(window.UNIT_DATA);
+  // data/units.json にユニットのファイル名を順番に書く。
+  function boot(list) { list.forEach(index); home(); }
+  const getJSON = (p) => fetch(p).then((r) => { if (!r.ok) throw new Error(p); return r.json(); });
+  if (window.UNITS_DATA) boot(window.UNITS_DATA);
   else {
-    fetch('data/unit-1-1.json').then((r) => r.json()).then(boot).catch(() => {
-      setKids(app, h('p', { class: 'err' }, 'data/unit-1-1.json を読み込めませんでした。'));
-    });
+    getJSON('data/units.json')
+      .then((files) => Promise.all(files.map((f) => getJSON('data/' + f))))
+      .then(boot)
+      .catch(() => { setKids(app, h('p', { class: 'err' }, 'データを読み込めませんでした。')); });
   }
 })();
