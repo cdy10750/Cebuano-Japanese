@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "_note": "コース1／段階1／ユニット1-3。形は unit-1-1.json と同じ。_ceb の文はすべて要確認。",
+  "course": 1,
+  "stage": 1,
+  "unit": {
+    "id": "1-3",
+    "title_ja": "接続・音声トラブル",
+    "title_ceb": "Problema sa Koneksiyon",
+    "cando_ja": "聞こえない・見えないを伝え、待ってもらい、かけ直した後に一言言える",
+    "cando_ceb": "Makasulti ka kung dili ka makadungog o makakita, makapahulat ka sa estudyante, ug makasulti ka human motawag pag-usab.",
+    "target": "both",
+    "video": { "file": "", "title_ja": "「聞こえますか」接続トラブル編", "title_ceb": "\"Kikoemasu ka?\" — problema sa koneksiyon", "items": ["C01", "C03", "C06", "C08"] }
+  },
+  "items": [
+    {
+      "id": "C01",
+      "category": "接続トラブル",
+      "scene_ceb": "Bag-o lang nisugod ang klase. Dili ka sigurado kung madungog ka sa estudyante.",
+      "intent_ceb": "Pangutan-a kung madungog ka niya.",
+      "scene_ja": "レッスンが始まったところ。自分の声が生徒に届いているかわからない。",
+      "intent_ja": "聞こえるか確かめよう。",
+      "hint": "Ki… ka?",
+      "romaji": "Kikoemasu ka?",
+      "ja": "聞こえますか。",
+      "furigana": [{ "t": "聞", "r": "き" }],
+      "ceb": "Madungog ba ko nimo?",
+      "ceb_source": "Jen OK",
+      "note_ceb": "Dili kinahanglan ang \"ko\" o \"nimo\" sa Nihongo. Pataasa ang tingog sa \"ka.\" Hinay ra ang \"u\" sa \"masu\": \"mas.\"",
+      "note_ja": "日本語では「私の声が」「あなたに」を言わない。「か」で声を上げる。「ます」の u は弱い。",
+      "explain": "K-C01",
+      "audio": "audio/1-3/C01.mp3",
+      "pitfalls": ["anata", "intonation"]
+    },
+    {
+      "id": "C02",
+      "category": "接続トラブル",
+      "scene_ceb": "Gi-on nimo ang imong camera. Dili ka sigurado kung makita ka sa estudyante.",
+      "intent_ceb": "Pangutan-a kung makita ka niya.",
+      "scene_ja": "カメラをオンにした。自分の映像が生徒に見えているかわからない。",
+      "intent_ja": "見えるか確かめよう。",
+      "hint": "Mi… ka?",
+      "romaji": "Miemasu ka?",
+      "ja": "見えますか。",
+      "furigana": [{ "t": "見", "r": "み" }],
+      "ceb": "Makita ba ko nimo?",
+      "ceb_source": "要確認",
+      "note_ceb": "Parehas ra og porma sa \"Kikoemasu ka?\" — \"mi-e-ma-su.\" Klaro ang \"e\": dili \"mi-i.\"",
+      "note_ja": "「聞こえますか」と同じ形。「え」をはっきり言い、「みい」にしない。",
+      "explain": "",
+      "audio": "audio/1-3/C02.mp3",
+      "pitfalls": ["e_i"]
+    },
+    {
+      "id": "C03",
+      "category": "接続トラブル",
+      "scene_ceb": "Hinay ug putol-putol ang tingog sa estudyante.",
+      "intent_ceb": "Isulti kini sa humok nga paagi, aron dili siya mobati nga iyang sayop.",
+      "scene_ja": "生徒の声が小さく、途切れている。",
+      "intent_ja": "生徒のせいに聞こえないよう、やわらかく伝えよう。",
+      "hint": "Cho… ki… de…",
+      "romaji": "Chotto kikoenikui desu.",
+      "ja": "ちょっと聞こえにくいです。",
+      "furigana": [{ "t": "聞", "r": "き" }],
+      "ceb": "Dili kaayo ko kadungog nimo.",
+      "ceb_source": "Jen OK",
+      "note_ceb": "Ang \"chotto\" mohumok sa imong gisulti. \"Cho-t-to\": mohunong gamay ang tingog sa \"tt.\"",
+      "note_ja": "「ちょっと」が言い方を和らげる。「っ」で音が一瞬止まる。",
+      "explain": "K-C06",
+      "audio": "audio/1-3/C03.mp3",
+      "pitfalls": ["sokuon"]
+    },
+    {
+      "id": "C04",
+      "category": "接続トラブル",
+      "scene_ceb": "Dili na molihok ang video sa estudyante. Nag-freeze ang screen.",
+      "intent_ceb": "Isulti kung unsay nahitabo.",
+      "scene_ja": "生徒の映像が動かなくなった。画面が固まっている。",
+      "intent_ja": "何が起きているか伝えよう。",
+      "hint": "Ga… ga to… i…",
+      "romaji": "Gamen ga tomatte imasu.",
+      "ja": "画面が止まっています。",
+      "furigana": [{ "t": "画面", "r": "がめん" }, { "t": "止", "r": "と" }],
+      "ceb": "Nag-freeze ang screen.",
+      "ceb_source": "要確認",
+      "note_ceb": "\"Gamen\" = screen. \"To-ma-t-te\": mohunong gamay ang tingog sa \"tt.\" Igo na nga isulti ang nahitabo; mahupay na ang estudyante.",
+      "note_ja": "「画面」は screen のこと。「とまって」の「っ」で音が一瞬止まる。起きていることを言うだけで、生徒は安心する。",
+      "explain": "",
+      "audio": "audio/1-3/C04.mp3",
+      "pitfalls": ["sokuon"]
+    },
+    {
+      "id": "C05",
+      "category": "接続トラブル",
+      "scene_ceb": "Nagsulti ang estudyante, apan wala kay madungog. Naka-mute ang iyang mic.",
+      "intent_ceb": "Hangyoa siya nga i-on ang mic.",
+      "scene_ja": "生徒が話しているのに何も聞こえない。マイクがミュートになっている。",
+      "intent_ja": "マイクをオンにするよう頼もう。",
+      "hint": "Ma… o o… ni shi… ku…",
+      "romaji": "Maiku o on ni shite kudasai.",
+      "ja": "マイクをオンにしてください。",
+      "furigana": [],
+      "ceb": "I-on daw ang imong mic.",
+      "ceb_source": "要確認",
+      "note_ceb": "Isulti sa tingog sa Nihongo: \"ma-i-ku,\" dili \"mayk.\" \"O-n,\" dili \"an.\"",
+      "note_ja": "日本語の音で言う。「マ・イ・ク」であり、英語の mike ではない。「オン」であり、「アン」ではない。",
+      "explain": "K-C05",
+      "audio": "audio/1-3/C05.mp3",
+      "pitfalls": ["katakana"]
+    },
+    {
+      "id": "C06",
+      "category": "接続トラブル",
+      "scene_ceb": "Kinahanglan nimo ayohon ang imong headset. Mga pipila ka segundo ra.",
+      "intent_ceb": "Hangyoa ang estudyante nga mohulat kadiyot.",
+      "scene_ja": "ヘッドセットを直したい。数秒かかる。",
+      "intent_ja": "少し待ってもらおう。",
+      "hint": "Cho… ma… ku…",
+      "romaji": "Chotto matte kudasai.",
+      "ja": "ちょっと待ってください。",
+      "furigana": [{ "t": "待", "r": "ま" }],
+      "ceb": "Kadiyot lang.",
+      "ceb_source": "資料",
+      "note_ceb": "Duha ka \"tt\": \"cho-t-to ma-t-te.\" Kung \"choto mate\" ang imong isulti, lisod kini sabton.",
+      "note_ja": "「っ」が2つある。「ちょと まて」と言うと通じにくい。",
+      "explain": "K-C06",
+      "audio": "audio/1-3/C06.mp3",
+      "pitfalls": ["sokuon"]
+    },
+    {
+      "id": "C07",
+      "category": "接続トラブル",
+      "scene_ceb": "Grabe na ang koneksiyon. Gusto nimong putlon ang tawag ug motawag pag-usab.",
+      "intent_ceb": "Isulti nga motawag ka pag-usab.",
+      "scene_ja": "接続がとても悪い。いったん切って、かけ直したい。",
+      "intent_ja": "かけ直すと伝えよう。",
+      "hint": "Mō… i… ka…",
+      "romaji": "Mō ichido kakemasu.",
+      "ja": "もう一度かけます。",
+      "furigana": [{ "t": "一度", "r": "いちど" }],
+      "ceb": "Motawag ko pag-usab.",
+      "ceb_source": "Jen OK",
+      "note_ceb": "Taas ang \"mō\": mo-o. Dili \"mu.\" \"Mō ichido\" = usa pa ka beses.",
+      "note_ja": "「もう」は長い。mu にしない。「もう一度」は「あと1回」の意味。",
+      "explain": "",
+      "audio": "audio/1-3/C07.mp3",
+      "pitfalls": ["long_vowel", "o_u"]
+    },
+    {
+      "id": "C08",
+      "category": "接続トラブル",
+      "scene_ceb": "Nakabalik na ka sa tawag. Naghulat ang estudyante og usa ka minuto.",
+      "intent_ceb": "Pangayo og pasaylo nga gipahulat nimo siya.",
+      "scene_ja": "通話に戻れた。生徒は1分ほど待っていた。",
+      "intent_ja": "待たせたことを詫びよう。",
+      "hint": "O-ma… shi…",
+      "romaji": "O-matase shimashita.",
+      "ja": "お待たせしました。",
+      "furigana": [{ "t": "待", "r": "ま" }],
+      "ceb": "Pasensya, nahulat ka.",
+      "ceb_source": "要確認",
+      "note_ceb": "Kabisaha isip usa ka tibuok. Gamiton kini kanunay sa mga tindahan ug opisina sa Japan. Hinay ra ang \"i\" sa \"shimashita\": \"shimashta.\"",
+      "note_ja": "丸ごと覚える。日本の店や会社でいつも使われる言葉。「しました」の i は弱い。",
+      "explain": "",
+      "audio": "audio/1-3/C08.mp3",
+      "pitfalls": ["untranslatable"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "1-3-L1",
+      "title_ja": "聞こえるか、見えるか",
+      "title_ceb": "Madungog ba, makita ba",
+      "new_items": ["C01", "C02", "C03"],
+      "steps": [
+        { "kind": "video" },
+        { "kind": "choice", "questions": ["1-3-L1-q1", "1-3-L1-q2", "1-3-L1-q3"] },
+        { "kind": "listening", "questions": ["1-3-L1-q4", "1-3-L1-q5", "1-3-L1-q6"] },
+        { "kind": "speaking", "hint": true, "items": ["C01", "C02", "C03"] },
+        { "kind": "listen_through", "items": ["C01", "C02", "C03"], "repeat": 2 }
+      ]
+    },
+    {
+      "id": "1-3-L2",
+      "title_ja": "画面、マイク、待ってもらう",
+      "title_ceb": "Screen, mic, ug pagpahulat",
+      "new_items": ["C04", "C05", "C06"],
+      "steps": [
+        { "kind": "choice", "questions": ["1-3-L2-q1", "1-3-L2-q2", "1-3-L2-q3"] },
+        { "kind": "listening", "questions": ["1-3-L2-q4", "1-3-L2-q5", "1-3-L2-q6"] },
+        { "kind": "speaking", "hint": true, "items": ["C04", "C05", "C06"] },
+        { "kind": "listen_through", "items": ["C04", "C05", "C06"], "repeat": 2 }
+      ]
+    },
+    {
+      "id": "1-3-L3",
+      "title_ja": "かけ直す、戻ったときの一言",
+      "title_ceb": "Pagtawag pag-usab ug pagbalik",
+      "new_items": ["C07", "C08"],
+      "steps": [
+        { "kind": "choice", "questions": ["1-3-L3-q1", "1-3-L3-q2", "1-3-L3-q3"] },
+        { "kind": "order", "questions": ["1-3-L3-q4", "1-3-L3-q5"] },
+        { "kind": "speaking", "hint": true, "sequences": ["1-3-L3-q4", "1-3-L3-q5"] }
+      ]
+    },
+    {
+      "id": "1-3-L4",
+      "title_ja": "通し練習",
+      "title_ceb": "Tibuok nga praktis",
+      "new_items": [],
+      "steps": [
+        { "kind": "speaking", "hint": false, "roleplays": ["1-3-L4-r1", "1-3-L4-r2", "1-3-L4-r3", "1-3-L4-r4"] }
+      ],
+      "pass_ja": "4回とも言えたら修了。言えなかった項目は復習リストに入れる。"
+    }
+  ],
+  "questions": [
+    { "id": "1-3-L1-q1", "type": "scene", "item": "C01", "choices": ["Kikoemasu ka?", "Anata wa kikoemasu ka?", "Miemasu ka?"], "answer": 0, "traps": { "1": "anata" }, "explain": "K-C01" },
+    { "id": "1-3-L1-q2", "type": "scene", "item": "C02", "choices": ["Kikoemasu ka?", "Chotto kikoenikui desu.", "Miemasu ka?"], "answer": 2 },
+    { "id": "1-3-L1-q3", "type": "scene", "item": "C03", "choices": ["Kikoemasen.", "Chotto kikoenikui desu.", "Kikoemasu ka?"], "answer": 1, "why_ceb": "Ang \"Kikoemasen\" (wala koy madungog) isog paminawon. Ang \"chotto … nikui desu\" mas humok.", "why_ja": "「聞こえません」はきつく聞こえる。「ちょっと〜にくいです」のほうがやわらかい。", "explain": "K-C06" },
+    { "id": "1-3-L1-q4", "type": "info", "audio_item": "C01", "prompt_ceb": "Unsay kahulogan niini?", "prompt_ja": "どういう意味？", "choices": ["Makita ba ko nimo?", "Madungog ba ko nimo?", "Dili kaayo ko kadungog nimo."], "answer": 1 },
+    { "id": "1-3-L1-q5", "type": "info", "audio_item": "C03", "prompt_ceb": "Unsay kahulogan niini?", "prompt_ja": "どういう意味？", "choices": ["Dili kaayo ko kadungog nimo.", "Madungog ba ko nimo?", "Makita ba ko nimo?"], "answer": 0 },
+    { "id": "1-3-L1-q6", "type": "info", "audio_item": "C02", "prompt_ceb": "Unsay kahulogan niini?", "prompt_ja": "どういう意味？", "choices": ["Madungog ba ko nimo?", "Dili kaayo ko kadungog nimo.", "Makita ba ko nimo?"], "answer": 2 },
+
+    { "id": "1-3-L2-q1", "type": "scene", "item": "C04", "choices": ["Gamen ga tomatte imasu.", "Chotto kikoenikui desu.", "Maiku o on ni shite kudasai."], "answer": 0 },
+    { "id": "1-3-L2-q2", "type": "scene", "item": "C05", "choices": ["Mayk o an ni shite kudasai.", "Gamen ga tomatte imasu.", "Maiku o on ni shite kudasai."], "answer": 2, "traps": { "0": "katakana" }, "explain": "K-C05" },
+    { "id": "1-3-L2-q3", "type": "scene", "item": "C06", "choices": ["Choto mate kudasai.", "Chotto matte kudasai.", "Kikoemasu ka?"], "answer": 1, "traps": { "0": "sokuon" }, "explain": "K-C06" },
+    { "id": "1-3-L2-q4", "type": "info", "audio_item": "C06", "prompt_ceb": "Unsay kahulogan niini?", "prompt_ja": "どういう意味？", "choices": ["Nag-freeze ang screen.", "Kadiyot lang.", "I-on daw ang imong mic."], "answer": 1 },
+    { "id": "1-3-L2-q5", "type": "info", "audio_item": "C04", "prompt_ceb": "Unsay kahulogan niini?", "prompt_ja": "どういう意味？", "choices": ["Nag-freeze ang screen.", "I-on daw ang imong mic.", "Kadiyot lang."], "answer": 0 },
+    { "id": "1-3-L2-q6", "type": "info", "audio_item": "C05", "prompt_ceb": "Unsay kahulogan niini?", "prompt_ja": "どういう意味？", "choices": ["Kadiyot lang.", "Nag-freeze ang screen.", "I-on daw ang imong mic."], "answer": 2 },
+
+    { "id": "1-3-L3-q1", "type": "scene", "item": "C07", "choices": ["Mō ichido kakemasu.", "Chotto matte kudasai.", "Mu ichido kakemasu."], "answer": 0, "traps": { "2": "o_u" }, "explain": "K-A01" },
+    { "id": "1-3-L3-q2", "type": "scene", "item": "C08", "choices": ["Chotto matte kudasai.", "O-matase shimashita.", "Hajimemashite."], "answer": 1 },
+    { "id": "1-3-L3-q3", "type": "scene", "scene_ceb": "Naglihok ang baba sa estudyante, apan wala kay madungog. Nakita nimo ang icon nga naka-mute siya. Unsay imong isulti?", "scene_ja": "生徒の口は動いているのに何も聞こえない。ミュートのアイコンが見える。何と言う？", "choices": ["Gamen ga tomatte imasu.", "Maiku o on ni shite kudasai.", "Mō ichido kakemasu."], "answer": 1, "why_ceb": "Ang problema anaa sa mic, dili sa screen o sa tawag.", "why_ja": "問題はマイクで、画面や通話ではない。" },
+    { "id": "1-3-L3-q4", "type": "order", "scene_ceb": "Dili nimo madungog og tarong ang estudyante. Isulti kini, pahulata siya, unya sultihi nga motawag ka pag-usab.", "scene_ja": "生徒の声がよく聞こえない。それを伝え、待ってもらい、かけ直すと言う。", "sequence": ["C03", "C06", "C07"] },
+    { "id": "1-3-L3-q5", "type": "order", "scene_ceb": "Nakabalik na ka sa tawag. Pangayo og pasaylo, unya susiha ang tingog ug ang video.", "scene_ja": "通話に戻れた。詫びてから、音声と映像を確かめる。", "sequence": ["C08", "C01", "C02"] }
+  ],
+  "roleplays": [
+    { "id": "1-3-L4-r1", "scene_ceb": "Alas 8 sa gabii sa Cebu. Nisugod ang klase. Timbayaa ang estudyante, unya susiha kung madungog ug makita ka niya.", "scene_ja": "セブは夜8時。レッスン開始。挨拶してから、聞こえるか、見えるかを確かめる。", "sequence": ["A03", "C01", "C02"] },
+    { "id": "1-3-L4-r2", "scene_ceb": "Hinay kaayo ang tingog sa estudyante, ug murag naka-mute siya. Isulti nga dili ka kaayo kadungog, unya hangyoa nga i-on ang mic.", "scene_ja": "生徒の声がとても小さく、ミュートのようだ。聞こえにくいと伝え、マイクをオンにするよう頼む。", "sequence": ["C03", "C05"] },
+    { "id": "1-3-L4-r3", "scene_ceb": "Nag-freeze ang screen. Isulti kini, pahulata ang estudyante, unya sultihi nga motawag ka pag-usab.", "scene_ja": "画面が固まった。それを伝え、待ってもらい、かけ直すと言う。", "sequence": ["C04", "C06", "C07"] },
+    { "id": "1-3-L4-r4", "scene_ceb": "Nakabalik na ka. Pangayo og pasaylo sa paghulat, unya susiha kung madungog ka.", "scene_ja": "通話に戻れた。待たせたことを詫び、聞こえるか確かめる。", "sequence": ["C08", "C01"] }
+  ],
+  "explanations": {
+    "K-C01": {
+      "title_ceb": "\"ba\" = \"ka\"",
+      "title_ja": "ba ＝「か」",
+      "ceb": "Sa Binisaya, ang \"ba\" maoy timaan sa pangutana: \"Madungog ba ko nimo?\" Dili usbon ang han-ay sa mga pulong. Sa Nihongo, parehas ra: idugang ang \"ka\" sa katapusan — \"Kikoemasu ka?\" Kung moagi ka sa English (\"Can you hear me?\"), basin imong usbon ang han-ay ug dugangan og \"anata wa.\" Dili kinahanglan: sa Nihongo, dili isulti ang \"ko\" ug \"nimo\" kung klaro na. Shortcut: \"ba\" = \"ka,\" apan ang \"ka\" kanunay sa katapusan.",
+      "ja": "セブアノ語では ba が疑問の印で、語順は変えない。日本語も同じで、文末に「か」を足すだけ。英語経由だと語順を変えようとしたり、「あなたは」を足したりしがち。日本語では、わかっていれば「私」「あなた」を言わない。近道は ba ＝「か」。ただし「か」は必ず文の最後。"
+    },
+    "K-C05": {
+      "title_ceb": "English nga pulong, tingog sa Nihongo",
+      "title_ja": "英語由来の語は日本語の音で",
+      "ceb": "Sa Binisaya, kanunay natong isagol ang English: \"mic,\" \"screen,\" \"chat.\" Sa Nihongo, daghan usab ang pulong gikan sa English — apan lahi ang tingog: \"maiku\" (ma-i-ku), \"on\" (o-n), \"chatto\" (cha-t-to), \"pēji\" (pe-e-ji). Ang lit-ag: kung imong isulti sa paagi sa English (\"mayk\"), dili kini masabtan sa estudyanteng Hapon. Shortcut: kabalo na ka sa pulong — ilisi lang ang tingog.",
+      "ja": "セブアノ語では英語の語をよく混ぜる（mic、screen、chat）。日本語にも英語由来の語が多いが、音が違う（マイク、オン、チャット、ページ）。英語の発音のまま言うと、日本人の生徒には通じない。近道は、語はもう知っているので、音だけを替えること。"
+    },
+    "K-C06": {
+      "title_ceb": "\"lang\" = \"chotto\"",
+      "title_ja": "lang ＝「ちょっと」",
+      "ceb": "Sa Binisaya, ang \"lang\" mohumok sa imong gisulti: \"Kadiyot lang.\" Sa Nihongo, ang \"chotto\" parehas og trabaho: \"Chotto matte kudasai,\" \"Chotto kikoenikui desu.\" Sa English, \"please\" ra ang kasagarang idugang, mao nga ang mga nagtuon pinaagi sa English malimot sa \"chotto\" ug isog paminawon. Bantayi ang \"tt\": \"cho-t-to,\" \"ma-t-te.\" Mohunong gamay ang tingog. Kung walay hunong, lahi na ang pulong.",
+      "ja": "セブアノ語では lang が言い方を和らげる（Kadiyot lang）。日本語では「ちょっと」が同じ働きをする（ちょっと待ってください、ちょっと聞こえにくいです）。英語では please を足すだけなので、英語経由の学習者は「ちょっと」を忘れ、きつく聞こえやすい。「っ」に注意。音が一瞬止まる。止めないと別の語になる。"
+    }
+  }
+}
