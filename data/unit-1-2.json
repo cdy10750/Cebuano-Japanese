@@ -1,0 +1,670 @@
+{
+  "version": 1,
+  "_note": "コース1／段階1／ユニット1-2。形は unit-1-1.json と同じ。_ceb の文はすべて要確認。",
+  "course": 1,
+  "stage": 1,
+  "unit": {
+    "id": "1-2",
+    "title_ja": "自己紹介する",
+    "title_ceb": "Pagpaila sa Kaugalingon",
+    "cando_ja": "名前、住んでいる所、仕事、日本語を勉強中であることを言い、生徒の名前と呼び方を聞ける",
+    "cando_ceb": "Makasulti ka sa imong ngalan, asa ka nagpuyo, imong trabaho, ug nga nagtuon ka og Nihongo. Makapangutana usab ka sa ngalan sa estudyante.",
+    "target": "both",
+    "video": {
+      "file": "",
+      "title_ja": "「私は」を3回言う Jessa",
+      "title_ceb": "Si Jessa nga tulo ka beses nag-\"Watashi wa\"",
+      "items": [
+        "B01",
+        "B03",
+        "B04"
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "B01",
+      "category": "自己紹介",
+      "scene_ceb": "Unang klase ninyo sa estudyante. Human sa \"Hajimemashite.\"",
+      "intent_ceb": "Isulti ang imong ngalan.",
+      "scene_ja": "初めての生徒とのレッスン。「はじめまして」の後。",
+      "intent_ja": "自分の名前を言おう。",
+      "hint": "Wa… wa Je… de…",
+      "romaji": "Watashi wa Jessa desu.",
+      "ja": "私はジェッサです。",
+      "furigana": [
+        {
+          "t": "私",
+          "r": "わたし"
+        }
+      ],
+      "ceb": "Ako si Jessa.",
+      "ceb_source": "資料",
+      "note_ceb": "Ilisi ang \"Jessa\" sa imong ngalan. Hinay ra ang \"u\" sa \"desu\": \"des.\"",
+      "note_ja": "「ジェッサ」を自分の名前に替える。「です」の u は弱く、「des」のように言う。",
+      "explain": "K-B01",
+      "audio": "audio/1-2/B01.mp3",
+      "variants": [
+        {
+          "id": "B01b",
+          "romaji": "Jessa desu.",
+          "ja": "ジェッサです。",
+          "furigana": [],
+          "hint": "Je… de…",
+          "use_ceb": "Mas mubo ug natural. Dili kinahanglan ang \"Watashi wa\" kada sentence.",
+          "use_ja": "短くて自然な言い方。毎回「私は」を言う必要はない。",
+          "audio": "audio/1-2/B01b.mp3",
+          "scene_ceb": "Mubo nga pagpaila, pananglitan kung nangutana ang estudyante sa imong ngalan pag-usab.",
+          "intent_ceb": "Isulti ang imong ngalan nga walay \"Watashi wa.\"",
+          "scene_ja": "短い自己紹介。例えば、生徒にもう一度名前を聞かれたとき。",
+          "intent_ja": "「私は」なしで名前を言おう。",
+          "explain": "K-B01b"
+        }
+      ],
+      "pitfalls": [
+        "word_order",
+        "subject_overuse"
+      ]
+    },
+    {
+      "id": "B02",
+      "category": "自己紹介",
+      "scene_ceb": "Gusto nimo nga tawgon ka sa estudyante sa imong ngalan, dili \"sensei.\"",
+      "intent_ceb": "Isulti kung unsay itawag niya nimo.",
+      "scene_ja": "生徒に、「先生」ではなく名前で呼んでほしい。",
+      "intent_ja": "呼び方を伝えよう。",
+      "hint": "Je… to yo… ku…",
+      "romaji": "Jessa to yonde kudasai.",
+      "ja": "ジェッサと呼んでください。",
+      "furigana": [
+        {
+          "t": "呼",
+          "r": "よ"
+        }
+      ],
+      "ceb": "Jessa lang ang itawag nimo nako.",
+      "ceb_source": "要確認",
+      "note_ceb": "Ang \"kudasai\" (palihug) anaa kanunay sa katapusan. \"Yo-n-de\": ayaw kalimti ang \"n.\"",
+      "note_ja": "「ください」はいつも文の最後。「よんで」の「ん」を落とさない。",
+      "explain": "",
+      "audio": "audio/1-2/B02.mp3",
+      "pitfalls": [
+        "moraic_n"
+      ]
+    },
+    {
+      "id": "B03",
+      "category": "自己紹介",
+      "scene_ceb": "Nagpaila ka sa imong kaugalingon.",
+      "intent_ceb": "Isulti kung asa ka nagpuyo.",
+      "scene_ja": "自己紹介の途中。",
+      "intent_ja": "住んでいる所を言おう。",
+      "hint": "Se… ni su… i…",
+      "romaji": "Sebu ni sunde imasu.",
+      "ja": "セブに住んでいます。",
+      "furigana": [
+        {
+          "t": "住",
+          "r": "す"
+        }
+      ],
+      "ceb": "Nagpuyo ko sa Cebu.",
+      "ceb_source": "Jen OK",
+      "note_ceb": "\"Sa Cebu\" = \"Sebu ni.\" Ang \"ni\" anaa sa likod sa lugar. Sa Nihongo, \"Sebu\" ang paglitok, dili \"Sibu.\"",
+      "note_ja": "sa Cebu ＝「セブに」。「に」は場所の後ろに付く。日本語では「セブ」と言い、「シブ」にしない。",
+      "explain": "K-B01",
+      "audio": "audio/1-2/B03.mp3",
+      "pitfalls": [
+        "particle_position",
+        "e_i"
+      ]
+    },
+    {
+      "id": "B04",
+      "category": "自己紹介",
+      "scene_ceb": "Nagpaila ka sa imong kaugalingon.",
+      "intent_ceb": "Isulti ang imong trabaho.",
+      "scene_ja": "自己紹介の途中。",
+      "intent_ja": "仕事を言おう。",
+      "hint": "E… no kō… de…",
+      "romaji": "Eigo no kōshi desu.",
+      "ja": "英語の講師です。",
+      "furigana": [
+        {
+          "t": "英語",
+          "r": "えいご"
+        },
+        {
+          "t": "講師",
+          "r": "こうし"
+        }
+      ],
+      "ceb": "English teacher ko.",
+      "ceb_source": "要確認",
+      "note_ceb": "Ayaw tawga ang imong kaugalingon og \"sensei\" — ang estudyante ang motawag nimo niana. Taas ang \"kō\": ko-o-shi.",
+      "note_ja": "自分のことを「先生」と言わない。「先生」は生徒が呼ぶときの言葉。「こう」は長い。",
+      "explain": "",
+      "audio": "audio/1-2/B04.mp3",
+      "pitfalls": [
+        "long_vowel"
+      ]
+    },
+    {
+      "id": "B05",
+      "category": "自己紹介",
+      "scene_ceb": "Gusto nimo ipahibalo sa estudyante nga nagtuon usab ka sa iyang pinulongan.",
+      "intent_ceb": "Isulti nga nagtuon ka og Nihongo.",
+      "scene_ja": "自分も生徒の言葉を学んでいると伝えたい。",
+      "intent_ja": "日本語を勉強していると言おう。",
+      "hint": "Ni… o be… shi… i…",
+      "romaji": "Nihongo o benkyō shite imasu.",
+      "ja": "日本語を勉強しています。",
+      "furigana": [
+        {
+          "t": "日本語",
+          "r": "にほんご"
+        },
+        {
+          "t": "勉強",
+          "r": "べんきょう"
+        }
+      ],
+      "ceb": "Nagtuon ko og Nihongo.",
+      "ceb_source": "Jen OK",
+      "note_ceb": "Malipay kaayo ang estudyante niini. \"Be-n-kyo-o\": taas ang \"kyō.\" Ang \"o\" anaa sa likod sa \"Nihongo.\"",
+      "note_ja": "生徒がとても喜ぶ一言。「きょう」は長い。「を」は「日本語」の後ろに付く。",
+      "explain": "",
+      "audio": "audio/1-2/B05.mp3",
+      "pitfalls": [
+        "long_vowel",
+        "particle_position"
+      ]
+    },
+    {
+      "id": "B06",
+      "category": "自己紹介",
+      "scene_ceb": "Unang klase. Wala pa ka kahibalo sa ngalan sa estudyante.",
+      "intent_ceb": "Pangutan-a ang iyang ngalan sa matinahurong paagi.",
+      "scene_ja": "初回のレッスン。生徒の名前をまだ知らない。",
+      "intent_ja": "丁寧に名前を聞こう。",
+      "hint": "O-na… o o… ku…",
+      "romaji": "O-namae o oshiete kudasai.",
+      "ja": "お名前を教えてください。",
+      "furigana": [
+        {
+          "t": "名前",
+          "r": "なまえ"
+        },
+        {
+          "t": "教",
+          "r": "おし"
+        }
+      ],
+      "ceb": "Unsa may imong ngalan?",
+      "ceb_source": "Jen OK",
+      "note_ceb": "Ang \"o-\" sa \"o-namae\" nagpakita og pagtahod sa estudyante. Ayaw gamita ang \"anata\" (ikaw).",
+      "note_ja": "「お名前」の「お」は生徒への敬意を表す。「あなた」は使わない。",
+      "explain": "K-B06",
+      "audio": "audio/1-2/B06.mp3",
+      "pitfalls": [
+        "anata"
+      ]
+    },
+    {
+      "id": "B07",
+      "category": "自己紹介",
+      "scene_ceb": "Nahibalo na ka sa ngalan sa estudyante: Satō Kenji.",
+      "intent_ceb": "Pangutan-a kung unsay gusto niya nga itawag nimo niya.",
+      "scene_ja": "生徒の名前はわかった（佐藤健二さん）。",
+      "intent_ja": "どう呼べばいいか聞こう。",
+      "hint": "Na… to yo… ka?",
+      "romaji": "Nan to yobimashō ka?",
+      "ja": "何と呼びましょうか。",
+      "furigana": [
+        {
+          "t": "何",
+          "r": "なん"
+        },
+        {
+          "t": "呼",
+          "r": "よ"
+        }
+      ],
+      "ceb": "Unsa may itawag nako nimo?",
+      "ceb_source": "要確認",
+      "note_ceb": "Kung motubag siya og \"Kenji,\" tawga siya og \"Kenji-san.\" Ang \"-san\" para sa estudyante, dili para sa imong kaugalingon.",
+      "note_ja": "「健二で」と言われたら「健二さん」と呼ぶ。「さん」は生徒に付け、自分には付けない。",
+      "explain": "",
+      "audio": "audio/1-2/B07.mp3",
+      "pitfalls": [
+        "long_vowel"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "1-2-L1",
+      "title_ja": "名前と住んでいる所",
+      "title_ceb": "Ngalan ug asa ka nagpuyo",
+      "new_items": [
+        "B01",
+        "B02",
+        "B03"
+      ],
+      "steps": [
+        {
+          "kind": "video"
+        },
+        {
+          "kind": "choice",
+          "questions": [
+            "1-2-L1-q1",
+            "1-2-L1-q2",
+            "1-2-L1-q3"
+          ]
+        },
+        {
+          "kind": "listening",
+          "questions": [
+            "1-2-L1-q4",
+            "1-2-L1-q5",
+            "1-2-L1-q6"
+          ]
+        },
+        {
+          "kind": "speaking",
+          "hint": true,
+          "items": [
+            "B01",
+            "B02",
+            "B03"
+          ]
+        },
+        {
+          "kind": "listen_through",
+          "items": [
+            "B01",
+            "B02",
+            "B03"
+          ],
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "id": "1-2-L2",
+      "title_ja": "仕事、勉強中、生徒の名前",
+      "title_ceb": "Trabaho, pagtuon, ug ngalan sa estudyante",
+      "new_items": [
+        "B04",
+        "B05",
+        "B06"
+      ],
+      "steps": [
+        {
+          "kind": "choice",
+          "questions": [
+            "1-2-L2-q1",
+            "1-2-L2-q2",
+            "1-2-L2-q3"
+          ]
+        },
+        {
+          "kind": "listening",
+          "questions": [
+            "1-2-L2-q4",
+            "1-2-L2-q5",
+            "1-2-L2-q6"
+          ]
+        },
+        {
+          "kind": "speaking",
+          "hint": true,
+          "items": [
+            "B04",
+            "B05",
+            "B06"
+          ]
+        },
+        {
+          "kind": "listen_through",
+          "items": [
+            "B04",
+            "B05",
+            "B06"
+          ],
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "id": "1-2-L3",
+      "title_ja": "呼び方を聞く、「私は」を減らす",
+      "title_ceb": "Unsay itawag, ug dili sobra nga \"Watashi wa\"",
+      "new_items": [
+        "B07",
+        "B01b"
+      ],
+      "steps": [
+        {
+          "kind": "choice",
+          "questions": [
+            "1-2-L3-q1",
+            "1-2-L3-q2",
+            "1-2-L3-q3"
+          ]
+        },
+        {
+          "kind": "order",
+          "questions": [
+            "1-2-L3-q4",
+            "1-2-L3-q5"
+          ]
+        },
+        {
+          "kind": "speaking",
+          "hint": true,
+          "sequences": [
+            "1-2-L3-q4",
+            "1-2-L3-q5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-2-L4",
+      "title_ja": "通し練習",
+      "title_ceb": "Tibuok nga praktis",
+      "new_items": [],
+      "steps": [
+        {
+          "kind": "speaking",
+          "hint": false,
+          "roleplays": [
+            "1-2-L4-r1",
+            "1-2-L4-r2",
+            "1-2-L4-r3"
+          ]
+        }
+      ],
+      "pass_ja": "3回とも言えたら修了。言えなかった項目は復習リストに入れる。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "1-2-L1-q1",
+      "type": "scene",
+      "item": "B01",
+      "choices": [
+        "Watashi wa Jessa desu.",
+        "Watashi desu Jessa.",
+        "Jessa to yonde kudasai."
+      ],
+      "answer": 0,
+      "traps": {
+        "1": "word_order"
+      },
+      "explain": "K-B01"
+    },
+    {
+      "id": "1-2-L1-q2",
+      "type": "scene",
+      "item": "B02",
+      "choices": [
+        "Sebu ni sunde imasu.",
+        "Jessa to yonde kudasai.",
+        "Watashi wa Jessa desu."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-2-L1-q3",
+      "type": "scene",
+      "item": "B03",
+      "choices": [
+        "Ni Sebu sunde imasu.",
+        "Sebu ni sunde imasu.",
+        "Sibu ni sunde imasu."
+      ],
+      "answer": 1,
+      "traps": {
+        "0": "particle_position",
+        "2": "e_i"
+      },
+      "explain": "K-B01"
+    },
+    {
+      "id": "1-2-L1-q4",
+      "type": "info",
+      "audio_item": "B03",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Ako si Jessa.",
+        "Nagpuyo ko sa Cebu.",
+        "Jessa lang ang itawag nimo nako."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-2-L1-q5",
+      "type": "info",
+      "audio_item": "B02",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Jessa lang ang itawag nimo nako.",
+        "Ako si Jessa.",
+        "Nagpuyo ko sa Cebu."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "1-2-L1-q6",
+      "type": "info",
+      "audio_item": "B01",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Nagpuyo ko sa Cebu.",
+        "Jessa lang ang itawag nimo nako.",
+        "Ako si Jessa."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "1-2-L2-q1",
+      "type": "scene",
+      "item": "B04",
+      "choices": [
+        "Eigo no kōshi desu.",
+        "Eigo no sensei desu.",
+        "Nihongo o benkyō shite imasu."
+      ],
+      "answer": 0,
+      "why_ceb": "Ang \"sensei\" para sa pagtawag sa uban. Para sa imong kaugalingon, \"kōshi.\"",
+      "why_ja": "「先生」は人を呼ぶときの言葉。自分には「講師」を使う。"
+    },
+    {
+      "id": "1-2-L2-q2",
+      "type": "scene",
+      "item": "B05",
+      "choices": [
+        "Eigo no kōshi desu.",
+        "Nihongo o benkyō shite imasu.",
+        "O-namae o oshiete kudasai."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-2-L2-q3",
+      "type": "scene",
+      "item": "B06",
+      "choices": [
+        "Anata no namae wa nan desu ka?",
+        "O-namae o oshiete kudasai.",
+        "Jessa to yonde kudasai."
+      ],
+      "answer": 1,
+      "traps": {
+        "0": "anata"
+      },
+      "explain": "K-B06"
+    },
+    {
+      "id": "1-2-L2-q4",
+      "type": "info",
+      "audio_item": "B05",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "English teacher ko.",
+        "Nagtuon ko og Nihongo.",
+        "Unsa may imong ngalan?"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "1-2-L2-q5",
+      "type": "info",
+      "audio_item": "B06",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Unsa may imong ngalan?",
+        "Nagtuon ko og Nihongo.",
+        "English teacher ko."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "1-2-L2-q6",
+      "type": "info",
+      "audio_item": "B04",
+      "prompt_ceb": "Unsay kahulogan niini?",
+      "prompt_ja": "どういう意味？",
+      "choices": [
+        "Nagtuon ko og Nihongo.",
+        "Unsa may imong ngalan?",
+        "English teacher ko."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "1-2-L3-q1",
+      "type": "scene",
+      "item": "B07",
+      "choices": [
+        "Nan to yobimashō ka?",
+        "O-namae o oshiete kudasai.",
+        "Jessa to yonde kudasai."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "1-2-L3-q2",
+      "type": "scene",
+      "scene_ceb": "Miingon na ka og \"Watashi wa Jessa desu.\" Sa sunod nga sentence, asa ang mas natural?",
+      "scene_ja": "「私はジェッサです」と言った後。次の文として自然なのは？",
+      "choices": [
+        "Watashi wa Sebu ni sunde imasu.",
+        "Sebu ni sunde imasu.",
+        "Anata wa Sebu ni sunde imasu."
+      ],
+      "answer": 1,
+      "why_ceb": "Kahibalo na ang estudyante nga ikaw ang gihisgotan. Dili na kinahanglan ang \"Watashi wa.\"",
+      "why_ja": "誰の話かはもう伝わっている。「私は」はもう要らない。",
+      "explain": "K-B01b"
+    },
+    {
+      "id": "1-2-L3-q3",
+      "type": "scene",
+      "scene_ceb": "Ang estudyante mitubag: \"Kenji de onegaishimasu.\" Unsaon nimo siya pagtawag?",
+      "scene_ja": "生徒が「健二でお願いします」と答えた。どう呼ぶ？",
+      "choices": [
+        "Kenji-san",
+        "Kenji",
+        "Anata"
+      ],
+      "answer": 0,
+      "why_ceb": "Butangi og \"-san\" ang ngalan sa estudyante. Ayaw gamita ang \"anata.\"",
+      "why_ja": "生徒の名前には「さん」を付ける。「あなた」は使わない。",
+      "explain": "K-B06"
+    },
+    {
+      "id": "1-2-L3-q4",
+      "type": "order",
+      "scene_ceb": "Ipaila ang imong kaugalingon: ngalan, asa nagpuyo, trabaho, ug nga nagtuon ka og Nihongo.",
+      "scene_ja": "自己紹介をする。名前、住んでいる所、仕事、日本語を勉強中、の順。",
+      "sequence": [
+        "B01",
+        "B03",
+        "B04",
+        "B05"
+      ]
+    },
+    {
+      "id": "1-2-L3-q5",
+      "type": "order",
+      "scene_ceb": "Pangutan-a ang ngalan sa estudyante, unya kung unsay itawag nimo niya.",
+      "scene_ja": "生徒の名前を聞き、次に呼び方を聞く。",
+      "sequence": [
+        "B06",
+        "B07"
+      ]
+    }
+  ],
+  "roleplays": [
+    {
+      "id": "1-2-L4-r1",
+      "scene_ceb": "Alas 8 sa gabii sa Cebu. Unang klase ninyo. Timbayaa ang estudyante ug ipaila ang imong kaugalingon: ngalan, asa nagpuyo, trabaho.",
+      "scene_ja": "セブは夜8時。初めてのレッスン。挨拶して、名前、住んでいる所、仕事を言う。",
+      "sequence": [
+        "A03",
+        "A04",
+        "B01",
+        "B03",
+        "B04"
+      ]
+    },
+    {
+      "id": "1-2-L4-r2",
+      "scene_ceb": "Isulti nga nagtuon ka og Nihongo ug kung unsay itawag niya nimo. Unya tapusa sa pangtimbaya sa unang klase.",
+      "scene_ja": "日本語を勉強中だと伝え、呼び方を伝える。最後に初回の挨拶で締める。",
+      "sequence": [
+        "B05",
+        "B02",
+        "A06b"
+      ]
+    },
+    {
+      "id": "1-2-L4-r3",
+      "scene_ceb": "Karon, ang estudyante na. Pangutan-a ang iyang ngalan ug kung unsay itawag nimo niya.",
+      "scene_ja": "次は生徒の番。名前を聞き、呼び方を聞く。",
+      "sequence": [
+        "B06",
+        "B07"
+      ]
+    }
+  ],
+  "explanations": {
+    "K-B01": {
+      "title_ceb": "Ang timaan anaa sa likod",
+      "title_ja": "印は後ろに付く",
+      "ceb": "Sa Binisaya, ang timaan anaa sa unahan: \"si Jessa,\" \"sa Cebu.\" Sa Nihongo, anaa kini sa likod: \"watashi wa,\" \"Sebu ni.\" Ug ang \"desu\" o ang verb kanunay sa katapusan. Kung moagi ka sa English (\"I am Jessa,\" \"in Cebu\"), basin \"Watashi desu Jessa\" o \"Ni Sebu\" ang mogawas. Shortcut: naa na kay timaan sa Binisaya — ibalhin lang sa likod sa pulong.",
+      "ja": "セブアノ語では印が語の前に付く（si Jessa、sa Cebu）。日本語では語の後ろに付く（私は、セブに）。「です」や動詞はいつも文の最後。英語経由だと「Watashi desu Jessa」「Ni Sebu」と言いがち。近道は、セブアノ語の印を語の後ろに移すと考えること。"
+    },
+    "K-B01b": {
+      "title_ceb": "Dili sobra nga \"Watashi wa\"",
+      "title_ja": "「私は」を言い過ぎない",
+      "ceb": "Sa Binisaya, kanunay naay \"ko\": \"Nagpuyo ko…,\" \"Nagtuon ko….\" Sa English, kanunay naay \"I.\" Apan sa Nihongo, kung klaro na kinsa ang gihisgotan, dili na isulti ang \"watashi wa.\" Kung imo kining balik-balikon, murag imong gipugos ang \"AKO.\" Isulti kini kausa sa sinugdanan, unya kuhaa na.",
+      "ja": "セブアノ語では毎回 ko が入り、英語では毎回 I が入る。日本語では、誰の話かがわかっていれば「私は」を言わない。繰り返すと「私が、私が」と強く聞こえる。最初に1回だけ言い、あとは省く。"
+    },
+    "K-B06": {
+      "title_ceb": "Ayaw gamita ang \"anata\"",
+      "title_ja": "「あなた」を使わない",
+      "ceb": "Sa Binisaya, natural ang \"ikaw,\" \"nimo,\" \"imong.\" Sa English, natural ang \"you.\" Sa mga libro, ang \"you\" gihubad og \"anata\" — apan sa tinuod, ang \"anata\" bugnaw ug usahay bastos paminawon sa usa ka kustomer. Sa Nihongo, gamiton ang ngalan + \"-san\" (\"Kenji-san\"), o kuhaon na lang: \"O-namae o oshiete kudasai.\"",
+      "ja": "セブアノ語では ikaw、nimo、imong が自然で、英語では you が自然。教科書は you を「あなた」と訳すが、実際には「あなた」は冷たく、顧客には失礼に聞こえることがある。日本語では名前に「さん」を付けて呼ぶか、言わずに済ませる（お名前を教えてください）。"
+    }
+  }
+}
